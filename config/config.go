@@ -2,6 +2,7 @@ package config
 
 import (
 	"fmt"
+	"log"
 	"os"
 )
 
@@ -14,6 +15,7 @@ type Config struct {
 }
 
 func Load() *Config {
+	log.Println(os.Getenv("DB_HOST"))
 	return &Config{
 		DBHost:     os.Getenv("DB_HOST"),
 		DBPort:     os.Getenv("DB_PORT"),

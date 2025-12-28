@@ -1,0 +1,13 @@
+# Go build
+*.exe
+*.out
+*.test
+
+# DB / config
+.env
+task.json
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/

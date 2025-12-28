@@ -2,6 +2,9 @@ package storage
 
 import (
 	"database/sql"
+	"log"
+
+	_ "github.com/lib/pq"
 
 	"github.com/arshakroshandev/go-todo-api/models"
 )
@@ -19,6 +22,7 @@ func InitPostgres(connStr string) error {
 	}
 
 	DB = db
+	log.Println("Connected to PostgreSQL")
 	return nil
 }
 
